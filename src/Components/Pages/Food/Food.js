@@ -10,28 +10,15 @@ const Food = () => {
     useEffect(() => {
         const fetchUser = async () => {
             setLoading(true); //making request
-
             const response = await axios.get(apiURL, { headers: { Accept: "application/json" } });
-
             console.log(response.data);
-
             let userArray = [];
-
             userArray.push(response.data.results);
-            console.log(userArray[0].length);
-
             setFood(userArray[0]);
-
             setLoading(false) //request received
-
         }
         fetchUser();
     }, [apiURL]);//run once
-
-
-    console.log(food, "FOOODDDD");
-
-
 
 
 

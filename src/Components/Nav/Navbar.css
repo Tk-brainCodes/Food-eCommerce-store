@@ -11,7 +11,6 @@ li {
     color: white;
     line-height: 50px;
     padding: 0 30px;
-    border-radius: 4em;
 }
 
 
@@ -23,9 +22,9 @@ li {
 
 .nav__bar {
     width: 50vw;
-    background-color: #1b1818;
-    border-radius: 2em;
-    margin: 50px auto 0;
+    background-color: #000000;
+    margin: 0;
+    width: 100vw;
     padding: 10px;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
 }

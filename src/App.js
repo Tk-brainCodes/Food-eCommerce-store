@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-
+          
         </Switch>
       </Router>
     </div>

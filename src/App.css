@@ -4,7 +4,7 @@
 }
 
 .App {
-   background: #202020;
+   background: rgb(15, 15, 15);
    text-align: center;
    width: 100vw;
    height: auto !important;

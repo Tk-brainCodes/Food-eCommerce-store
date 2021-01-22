@@ -1,0 +1,43 @@
+li {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-flex;
+}
+
+.list__link {
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    line-height: 50px;
+    padding: 0 30px;
+    border-radius: 4em;
+}
+
+
+.nav__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav__bar {
+    width: 50vw;
+    background-color: #1b1818;
+    border-radius: 2em;
+    margin: 50px auto 0;
+    padding: 10px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    background: teal;
+    color: white;
+    transition: 0.3s ease;
+}

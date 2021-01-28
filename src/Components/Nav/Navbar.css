@@ -2,15 +2,17 @@ li {
     list-style-type: none;
     text-decoration: none;
     display: inline-flex;
+    margin-top: 3px;
 }
 
 .list__link {
     text-decoration: none;
     font-size: 15px;
-    text-transform: uppercase;
     color: white;
-    line-height: 50px;
+    line-height: 30px;
+    text-transform: uppercase;
     padding: 0 30px;
+    transition: 0.3s ease;
 }
 
 
@@ -21,15 +23,13 @@ li {
 }
 
 .nav__bar {
-    width: 50vw;
     background-color: #000000;
     margin: 0;
     width: 100vw;
-    padding: 10px;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
     z-index: 10;
     position: fixed;
-    margin-top: 80px;
+    bottom: 0;
 }
 
 nav {
@@ -39,16 +39,43 @@ nav {
 }
 
 .active {
-    border-bottom: 4px solid  teal;
     color: white;
     transition: 0.3s ease;
+    color: teal;
 }
 
 .length {
    padding: 10px;
-   color: teal;
-   font-size: 20px;
+   color: white;
+   font-size: 25px;
    font-style: normal;
+   color: teal;
    font-weight: bolder;
 
+}
+
+.fa-shopping-cart {
+    font-size: 20px;
+}
+
+span {
+    background: #f00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 50%;
+    color: #fff;
+    vertical-align: top;
+    margin-left: -5px;
+}
+
+.notify__ {
+   display: flex;
+   width: auto !important;
+   height: auto !important;
+   align-items: center;
+   justify-content: center;
 }

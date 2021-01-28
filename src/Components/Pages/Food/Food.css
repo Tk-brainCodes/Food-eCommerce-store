@@ -12,7 +12,7 @@
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 100px;
 }
 
 .food__container {
@@ -20,7 +20,7 @@
     background: rgb(22, 22, 22);
     margin-top: 20px;
     margin-left: 20px;
-    width: 500px;
+    width: 300px;
     height: auto !important;
     border-radius: 4px;
 }
@@ -95,10 +95,42 @@ h1 {
     align-items: center;
 }
 
-.cart__component {
+.food__heading {
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.cart__heading {
+    margin-top: 40px;
+    padding: 10px;
+    color: gray;
+}
+
+.empty {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
+}
+
+.fa-opencart {
+    font-size: 200px;
+    color: gray;
+}
+
+#icon__trash {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(80, 77, 77);
+    padding: 10px 15px;
+}
+
+.fragment__ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }

@@ -8,21 +8,31 @@ const Navbar = ({ cart }) => {
             <div className="nav__bar">
                 <ul className="nav__items">
                     <li>
-                        <NavLink exact className="list__link" activeClassName="active" to="/">Food</NavLink>
-                    </li>
-                    <li>
-                        <NavLink exact className="list__link" activeClassName="active" to="/saved">Saved</NavLink>
-                    </li>
-                    <li>
-                        <NavLink exact className="list__link" activeClassName="active" to="/cart">
-                            <i class="fas fa-shopping-cart"></i>
-                            <i className="length">
-                                {cart.length}
-                            </i>
+                        <NavLink exact className="list__link" activeClassName="active" to="/">
+                            <i style={{ fontSize: "20px" }} class="fas fa-utensils"></i> <br />
+                        Food
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink exact className="list__link" activeClassName="active" to="/products">Products</NavLink>
+                        <NavLink exact className="list__link" activeClassName="active" to="/saved">
+                            <i style={{ fontSize: "20px" }} className="far fa-heart"></i> <br />
+                        Saved
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink exact className="list__link" activeClassName="active" to="/cart">
+                            <div className="notify__">
+                                <i syle={{ fontSize: "20px",cursor: "pointer" }} class="fas fa-shopping-cart"></i>
+                                <span>{cart.length}</span>
+                            </div>
+                            Cart
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink exact className="list__link" activeClassName="active" to="/products">
+                            <i style={{ fontSize: "20px" }} class="fas fa-shopping-basket"></i><br />
+                        Products
+                        </NavLink>
                     </li>
                 </ul>
             </div>

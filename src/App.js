@@ -9,19 +9,21 @@ import Food from './Components/Pages/Food/Food';
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [food, setFood] = useState([]);
+  const [loading, setLoading] = useState(false);
   return (
     <div className="App">
       <Router>
         <Navbar cart={cart} />
         <div>
           <Route exact path="/">
-            <Food cart={cart} setCart={setCart} />
+            <Food loading={loading} setLoading={setLoading} food={food} setFood={setFood} cart={cart} setCart={setCart} />
           </Route>
           <Route exact path="/saved">
             <Saved />
           </Route>
           <Route exact path="/cart">
-            <Cart cart={cart} setCart={setCart} />
+            <Cart food={food} setFood={setFood} cart={cart} setCart={setCart} />
           </Route>
           <Route exact path="/products">
             <Products />

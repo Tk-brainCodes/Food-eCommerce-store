@@ -7,7 +7,8 @@ li {
 
 .list__link {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 12px;
+    font-weight: bolder;
     color: white;
     line-height: 30px;
     text-transform: uppercase;
@@ -36,12 +37,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .active {
     color: white;
     transition: 0.3s ease;
-    color: teal;
+    color: #d4ba52;
 }
 
 .length {
@@ -59,7 +61,7 @@ nav {
 }
 
 span {
-    background: #f00;
+    background:  #9e810d;
     display: flex;
     align-items: center;
     justify-content: center;

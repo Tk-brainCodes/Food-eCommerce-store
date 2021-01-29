@@ -4,6 +4,10 @@
 
 
 .container__ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 20px;
     margin-top: 30px;
 }
@@ -26,13 +30,9 @@
 }
 
 .img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    padding: 5px;
-    -webkit-box-shadow: -2px 3px 114px 22px rgba(0,0,0,0.75);
-    -moz-box-shadow: -2px 3px 114px 22px rgba(0,0,0,0.75);
-    box-shadow: -2px 3px 114px 22px rgba(0,0,0,0.75);
+    width: 300px;
+    height: 220px;
+    padding: 2px;
 }
 
 h1 {
@@ -44,6 +44,7 @@ h1 {
 .Header {
     padding: 10px;
     font-size: 20px;
+    height: 100px;
     font-weight: bolder;
     color: white;
     margin-bottom: 10px;
@@ -68,6 +69,15 @@ h1 {
     margin-bottom: 10px;
     background:  #ffeead;
     border: none;
+    cursor: pointer;
+}
+
+.addBtn:hover {
+    color:  #d4ba52;
+    content: 'ADD';
+    transition: 0.3s ease;
+    background: rgb(22, 22, 22);
+
 }
 
 .buttons__ {
@@ -85,6 +95,12 @@ h1 {
     border: none;
     align-items: center;
     cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.far:hover {
+    transform: rotateY(-360deg); 
 }
 
 .loading {
@@ -98,6 +114,7 @@ h1 {
 .food__heading {
     margin-top: 40px;
     padding: 10px;
+    letter-spacing: 15px;
 }
 
 .cart__heading {
@@ -128,9 +145,138 @@ h1 {
     padding: 10px 15px;
 }
 
+
 .fragment__ {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.total__cost {
+    font-size: 50px;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.bold {
+    font-size: 50px;
+    color: lightgreen;
+}
+
+#clear__Btn {
+    padding: 1em 2em;
+    background: rgb(223, 162, 162);
+    color: rgb(194, 69, 69);
+    font-weight: bolder;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.clear_the_cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.cart__component {
+   margin: 0;
+   padding: 0;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quantity__ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: 300;
+    color: lightgreen;
+}
+
+.input__text {
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 6px solid rgb(39, 38, 38);
+    color: white;
+    background-color: rgb(22, 22, 22);
+    font-size: 20px;
+}
+
+.input__text:focus {
+    outline: none;
+}
+
+.checkOut__Btn {
+    color: white;
+    padding: 1.2em 6em;
+    background-color: rgb(52, 124, 52);
+    font-weight: bolder;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+.checkOut__Btn:hover {
+    background-color: rgb(58, 146, 58);
+    transition: 0.3s ease;
+}
+
+.check__out {
+    width: 100vw;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #f1d667;
+    padding: 20px;
+}
+
+text {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    letter-spacing: 0;
+    color:  #f1d667;
+}
+
+
+.discover__more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+.discover__Btn {
+    padding: 1.2em 6em ;
+    background:  #f1d667;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 6px;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.discover__Btn:hover {
+    background:  #f7d346;
 }

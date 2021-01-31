@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import './Components/Pages/Food/Food.css';
-import { Route, BrowserRouter as Router, NavLink } from 'react-router-dom';
+import { Route, BrowserRouter as Router} from 'react-router-dom';
 import Cart from './Components/Pages/Cart/Cart';
 import Products from './Components/Pages/Products/Products';
 import Saved from './Components/Pages/Saved/Saved';
@@ -14,6 +14,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [food, setFood] = useState([]);
   const [loading, setLoading] = useState(false);
+
 
 
   useEffect(() => {

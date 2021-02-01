@@ -17,9 +17,40 @@ function App() {
   const [cart, setCart] = useState([]);
   const [food, setFood] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [save, setSave] = useState([]);
 
 
+  useEffect(() => {
+    const addedToCart = JSON.parse(localStorage.getItem('added-to-cart'));
+    if (addedToCart) {
+      setSave(addedToCart);
+    }
+  }, [])
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem('added-to-cart', JSON.stringify(items));
+  }
 
+
+  //save food
+  const saveTheFood = (product) => {
+    let newSaved = [...save];
+    let itemInSave = newSaved.find((item) => product.title === item.title);
+    if (itemInSave) {
+      itemInSave.quantity++;
+    } else {
+      itemInSave = {
+        ...product,
+        quantity: 1
+      }
+      newSaved.push(itemInSave);
+    }
+    setSave(newSaved);
+    saveToLocalStorage(newSaved);
+    console.log(save, 'Saved food');
+  }
+
+
+  //fetch data
   useEffect(() => {
     const fetchUser = async (d) => {
       setLoading(true); //making request
@@ -56,6 +87,9 @@ function App() {
             <div>
               <Route exact path="/">
                 <Food
+                  save={save}
+                  setSave={setSave}
+                  saveTheFood={saveTheFood}
                   loading={loading}
                   setLoading={setLoading}
                   food={food}
@@ -65,7 +99,10 @@ function App() {
                 />
               </Route>
               <Route exact path="/saved">
-                <Saved />
+                <Saved
+                  save={save}
+                  setSave={setSave}
+                />
               </Route>
               <Route exact path="/cart">
                 <Cart

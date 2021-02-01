@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     padding: 20px;
     margin-top: 30px;
+    margin-bottom: 100px;
 }
 
 .food__ {
@@ -282,20 +283,40 @@ text {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 .discover__Btn {
-    padding: 1.2em 6em ;
+    padding: 20px ;
+    border: none;
     background:  #f1d667;
     color: black;
     text-transform: uppercase;
     border-radius: 6px;
     outline: none;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .discover__Btn:hover {
     background:  #f7d346;
+}
+
+.isSaved__ {
+    padding: 10px;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+.disabled {
+    padding: 10px;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: white;
+    font-size: 20px;
 }

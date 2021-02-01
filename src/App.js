@@ -10,6 +10,7 @@ import Navbar from './Components/Nav/Navbar'
 import Food from './Components/Pages/Food/Food';
 import Receipt from './Components/Pages/Food/Receipt.json';
 import TopNav from './Components/Top-Nav/TopNavbar';
+import HeroSection from './Components/HeroSection/Hero';
 import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
@@ -80,7 +81,10 @@ function App() {
           </Router>
         </Fragment>
       ) : (
-          <TopNav />
+          <Fragment>
+            <TopNav />
+            <HeroSection />
+          </Fragment>
         )}
 
     </div>

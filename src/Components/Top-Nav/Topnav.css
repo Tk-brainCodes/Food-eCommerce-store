@@ -1,0 +1,56 @@
+.top__nav {
+    width: 100vw;
+    background: #fffbec;
+    margin-bottom: 20px;
+}
+
+.spinner__{
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinning__icon {
+    color: lightgreen;
+}
+
+
+.navigate__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.isAuthenticated__{
+    width: 60%;
+    padding: 10px;
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 480px) {
+    .isAuthenticated__ {
+        width: auto !important;
+    }
+}
+
+.p__welcome {
+    font-size: 25px;
+    padding: 10px;
+    letter-spacing: 4px;
+}
+
+.welcome {
+    display: inline-flex;
+    width: 30%;
+}
+
+.order {
+    font-size: 16px;
+    background-color: #d4ba52;
+    width: 50px;
+    padding: 10px;
+    border-radius: 4px;
+}

@@ -19,6 +19,25 @@
     margin-bottom: 100px;
 }
 
+.close_btn {
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 50%;
+    background: none;
+    outline: none;
+    border: none;
+    background-color: #d3b128;
+}
+
+.fa-times{
+     color: white;
+}
+
+.snackabr__ {
+    background: lightgreen;
+}
+
 .food__container {
     padding: 10px;
     background: rgb(22, 22, 22);

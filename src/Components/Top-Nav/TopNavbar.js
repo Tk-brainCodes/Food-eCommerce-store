@@ -18,7 +18,7 @@ const TopNavbar = () => {
         <div className="top__nav">
             <div className="navigate__top">
                 <div className="welcome">
-                    <p className="p__welcome"> Foodie <p className="order">order</p></p>
+                    <p className="p__welcome"> Foodie <div className="order">order</div></p>
                 </div>
 
                 <div className="isAuthenticated__">

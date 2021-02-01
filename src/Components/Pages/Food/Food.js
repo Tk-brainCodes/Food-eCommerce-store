@@ -1,9 +1,25 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Food.css';
 import Snackbar from '@material-ui/core/Snackbar';
 
-const Food = ({ loading, food, cart, setCart }) => {
+const Food = (
+    { loading,
+        food,
+        cart,
+        setCart,
+        saveTheFood
+    }) => {
+
+
     const [open, setOpen] = useState(false);
+    const [isSaved, setIsSaved] = useState(true);
+    
+
+    //save func.
+    const setIsSavedFunc = () => {
+        setIsSaved(!isSaved);
+    }
 
     useEffect(() => {
         const addedToCart = JSON.parse(localStorage.getItem('added-to-cart'));
@@ -29,6 +45,7 @@ const Food = ({ loading, food, cart, setCart }) => {
             }
             newCart.push(itemInCart);
         }
+
         // const cartAdded = [...cart, { ...food }];
         setCart(newCart);
         //opn snackbar
@@ -70,9 +87,13 @@ const Food = ({ loading, food, cart, setCart }) => {
                                     <div className="buttons__">
                                         <div className="addBtn" onClick={() => addToCart(receipt)}>
                                             Add to Cart <i class="fas fa-shopping-cart"></i></div>
-                                        <div className="Btn__love">
-                                            <i><i class="far fa-bookmark"></i></i>
-                                        </div>
+                                        <NavLink exact to="/saved">
+                                            <div className="Btn__love" onClick={() => saveTheFood(receipt)}>
+                                                <button className={`isSaved__ ${isSaved ? "" : "disabled"}`} onClick={setIsSavedFunc}>
+                                                 <i class="far fa-bookmark"></i> 
+                                                </button>
+                                            </div>
+                                        </NavLink>
                                     </div>
                                 </div>
                             ))}
@@ -96,15 +117,11 @@ const Food = ({ loading, food, cart, setCart }) => {
                                 </Fragment>
                             }
                         />
-
-                        <div className="discover__more">
+                        <NavLink exact to="/products">
                             <button className="discover__Btn">
                                 Discover More :)
-                            </button>
-                        </div>
-
-
-
+                  </button>
+                        </NavLink>
                     </Fragment>
 
                 )}

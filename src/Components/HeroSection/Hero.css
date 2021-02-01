@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanalei&family=Lobster+Two&family=Ramabhadra&family=Yusei+Magic&display=swap');
+
+.hero__section {
+    display: grid ;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    height: auto !important;
+    margin-top: 50px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .hero__section {
+        display: flex ;
+        flex-wrap: wrap;
+        flex-flow: column;
+        height: auto !important;
+        margin-top: 30px;
+    }
+    
+    .hero__text {
+        display: grid;
+        width: 100vw;
+        height: auto !important;
+    }
+    
+    .hero__image{
+        display: grid;
+        height: 20vh;
+        background-image: url(hamburger.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+}
+
+.hero__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.hero__image{
+    display: grid;
+    height: 80vh;
+    background-image: url(hamburger.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hero__textarea {
+    padding: 20px;
+    margin-top: 100px;
+    width: 600px;
+}
+
+.dicover__dishes {
+    font-size: 40px;
+    color: white;
+    font-family: 'Ramabhadra', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#dish {
+    font-family: 'Hanalei', cursive;
+    font-style: normal;
+    color: #d4ba52;
+    letter-spacing: 5px;
+}
+
+.text {
+    font-size: 30px;
+    color: white;
+    line-height: 50px;
+    letter-spacing: 2px;
+}
+
+#bold {
+    font-size: 35px;
+    color: #536DFE;
+}
+
+#bold_text {
+    color: #536DFE;
+}

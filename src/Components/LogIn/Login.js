@@ -9,7 +9,7 @@ const Login = () => {
              onClick={() => loginWithPopup()}
              className="log__Btn"
         >
-            Login
+            Login or Sign Up
         </button>
     )
 }

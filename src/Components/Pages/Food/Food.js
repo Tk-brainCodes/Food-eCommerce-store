@@ -2,31 +2,32 @@ import React, { Fragment, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Food.css';
 import Snackbar from '@material-ui/core/Snackbar';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
+
 
 const Food = (
     { loading,
         food,
         cart,
         setCart,
-        saveTheFood
     }) => {
 
 
     const [open, setOpen] = useState(false);
-    const [isSaved, setIsSaved] = useState(true);
-    
 
-    //save func.
-    const setIsSavedFunc = () => {
-        setIsSaved(!isSaved);
-    }
-
+    //local storage
     useEffect(() => {
+     try {
         const addedToCart = JSON.parse(localStorage.getItem('added-to-cart'));
         if (addedToCart) {
             setCart(addedToCart);
         }
-    }, [])
+     } catch(error){
+         console.log(error)
+     }
+
+    }, [setCart])
 
     const saveToLocalStorage = (items) => {
         localStorage.setItem('added-to-cart', JSON.stringify(items));
@@ -48,10 +49,12 @@ const Food = (
 
         // const cartAdded = [...cart, { ...food }];
         setCart(newCart);
+        saveToLocalStorage(newCart);
         //opn snackbar
         setOpen(true);
-        saveToLocalStorage(newCart);
-    }
+        }
+
+
 
 
     //close snackbar
@@ -72,32 +75,28 @@ const Food = (
                 </div>
                 : (
                     <Fragment>
-                        <h1 className="food__heading"><b>Hungry?</b> <br /> <text>order and eat  : )</text>  <i className="fas fa-utensils"></i></h1><br />
-                        <div className="food__">
+                        <h1 className="food__heading"><b>Hungry?</b> <br /> order and eat  : ) <i className="fas fa-utensils"></i></h1><br />
+                        <ScrollAnimation animatePreScroll={true} className="food__ animate__fadeIn" animateIn="fadeIn">
                             {food.filter((receipt) => receipt.image).map((receipt, idx) => (
                                 <div className="food__container" key={idx}>
-                                    <div className="Header">
-                                        {receipt.title}
-                                    </div>
-                                    <img className="img" src={receipt.image} alt={receipt.title} />
-                                    <div className="price__">
-                                        $ {receipt.price}
-                                    </div><br /><br />
-                                    <h5><i class="fas fa-map-marker-alt"></i> {receipt.restaurantChain}</h5><br />
-                                    <div className="buttons__">
-                                        <div className="addBtn" onClick={() => addToCart(receipt)}>
-                                            Add to Cart <i class="fas fa-shopping-cart"></i></div>
-                                        <NavLink exact to="/saved">
-                                            <div className="Btn__love" onClick={() => saveTheFood(receipt)}>
-                                                <button className={`isSaved__ ${isSaved ? "" : "disabled"}`} onClick={setIsSavedFunc}>
-                                                 <i class="far fa-bookmark"></i> 
-                                                </button>
+                                    <ScrollAnimation className="animate__fadeInUp" animateIn="fadeInUp">
+                                        <div className="Header">
+                                            {receipt.title}
+                                        </div>
+                                        <img className="img" src={receipt.image} alt={receipt.title} />
+                                        <div className="price__">
+                                            $ {receipt.price}
+                                        </div><br /><br />
+                                        <h5><i className="fas fa-map-marker-alt"></i> {receipt.restaurantChain}</h5><br />
+                                        <div className="buttons__">
+                                            <div className="addBtn" onClick={() => addToCart(receipt)}>
+                                                Add to Cart <i className="fas fa-shopping-cart"></i>
                                             </div>
-                                        </NavLink>
-                                    </div>
+                                        </div>
+                                    </ScrollAnimation>
                                 </div>
                             ))}
-                        </div>
+                        </ScrollAnimation>
                         {/*Snackbar*/}
                         <Snackbar
                             anchorOrigin={{
@@ -118,9 +117,7 @@ const Food = (
                             }
                         />
                         <NavLink exact to="/products">
-                            <button className="discover__Btn">
-                                Discover More :)
-                  </button>
+                            <button className="discover__Btn">Discover More :)</button>
                         </NavLink>
                     </Fragment>
 

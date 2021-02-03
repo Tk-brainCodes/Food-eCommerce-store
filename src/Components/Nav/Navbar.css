@@ -24,7 +24,7 @@ li {
 }
 
 .nav__bar {
-    background-color: #000000;
+    background-color:  #08543C;
     margin: 0;
     width: 100vw;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
@@ -43,7 +43,7 @@ nav {
 .active {
     color: white;
     transition: 0.3s ease;
-    color: #d4ba52;
+    color: #FA9F42;
 }
 
 .length {

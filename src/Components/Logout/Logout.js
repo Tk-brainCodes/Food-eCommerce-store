@@ -9,7 +9,7 @@ const Logout = () => {
     return (
         <div className="user__container">
             <div className="user__name">
-               {user.name} <i className="fas fa-circle"></i>
+              Hello, {user.name}
             </div>
             <div className="button">
                 <button className="log__Btn" onClick={() => logout()}>

@@ -6,7 +6,7 @@ import App from './App';
 import Auth0ProviderComp from './Auth0-Provider/auth0-provider';
 
 ReactDOM.render(
-  <BrowserRouter>
+     <BrowserRouter>
     <Auth0ProviderComp>
       <App />
     </Auth0ProviderComp>

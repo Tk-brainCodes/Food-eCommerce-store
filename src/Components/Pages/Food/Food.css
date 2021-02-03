@@ -8,7 +8,6 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 20px;
     margin-top: 30px;
     margin-bottom: 100px;
 }
@@ -17,6 +16,7 @@
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     margin-bottom: 100px;
 }
 
@@ -35,30 +35,31 @@
      color: white;
 }
 
-.snackabr__ {
-    background: lightgreen;
-}
 
 .food__container {
-    padding: 10px;
-    background: rgb(22, 22, 22);
+    background: ghostwhite;
     margin-top: 20px;
-    margin-left: 20px;
-    width: 300px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    width: 350px;
     height: auto !important;
     border-radius: 4px;
+    -webkit-box-shadow: -1px -1px 125px -35px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px -1px 125px -35px rgba(0,0,0,0.75);
+box-shadow: -1px -1px 125px -35px rgba(0,0,0,0.75);
 }
 
 .img {
     width: 300px;
     height: 220px;
-    padding: 2px;
+    border-radius: 6px;
 }
 
 h1 {
-    color: #ffeead;
-    font-size: 35px;
-    font-family: 'Gorditas', cursive;
+    color: #FA9F42;
+    font-size: clamp(35px,2.5vw, 40px);
+    line-height: 2em;
+    letter-spacing: 2px;
 }
 
 .Header {
@@ -66,7 +67,7 @@ h1 {
     font-size: 20px;
     height: 100px;
     font-weight: bolder;
-    color: white;
+    color:  #7F7F87;
     margin-bottom: 10px;
     margin-top: 10px;
     font-family: 'Yusei Magic', sans-serif;
@@ -74,10 +75,9 @@ h1 {
 
 .price__ {
     font-size: 50px;
-    color: gray;
+    color: #2B4162;
     font-weight: 900;
     padding: 20px;
-    font-family: 'Gorditas', cursive;
 }
 
 .addBtn {
@@ -87,17 +87,16 @@ h1 {
     font-weight: bolder;
     margin-top: 5px;
     margin-bottom: 10px;
-    background:  #ffeead;
+    background: #2B4162;
+    color: white;
     border: none;
     cursor: pointer;
 }
 
 .addBtn:hover {
-    color:  #d4ba52;
+    color:  white;
     content: 'ADD';
     transition: 0.3s ease;
-    background: rgb(22, 22, 22);
-
 }
 
 .buttons__ {
@@ -116,7 +115,7 @@ h1 {
     align-items: center;
     cursor: pointer;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .far:hover {
@@ -134,7 +133,6 @@ h1 {
 .food__heading {
     margin-top: 40px;
     padding: 10px;
-    letter-spacing: 15px;
 }
 
 .cart__heading {
@@ -226,9 +224,9 @@ h1 {
     padding: 12px;
     border-radius: 4px;
     margin-bottom: 20px;
-    border: 6px solid rgb(39, 38, 38);
+    border: 6px solid #162131;
     color: white;
-    background-color: rgb(22, 22, 22);
+    background-color: #162131;
     font-size: 20px;
 }
 
@@ -264,12 +262,12 @@ h1 {
 
 h5 {
     font-size: 18px;
-    font-weight: 300;
-    color: #f1d667;
+    font-weight: bolder;
+    color:  #0B6E4F;
     padding: 20px;
 }
 
-text {
+.text {
     font-weight: 300;
     font-style: normal;
     font-size: 25px;
@@ -287,9 +285,9 @@ text {
 }
 
 .discover__Btn {
-    padding: 20px ;
+    padding: 1em 6em;
     border: none;
-    background:  #f1d667;
+    background:  #FA9F42;
     color: black;
     text-transform: uppercase;
     border-radius: 6px;
@@ -299,7 +297,7 @@ text {
 }
 
 .discover__Btn:hover {
-    background:  #f7d346;
+    background:  #f09234;
 }
 
 .isSaved__ {
@@ -307,7 +305,7 @@ text {
     background: none;
     outline: none;
     border: none;
-    color: white;
+    color: #2B4162;
     font-size: 20px;
 }
 
@@ -320,3 +318,36 @@ text {
     background-color: white;
     font-size: 20px;
 }
+
+.remove{
+    padding: 1em 2em;
+    margin-bottom: 30px;
+    color: white;
+    background: #6C6C73;
+    border-radius: 5px;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.close__modal {
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border-radius: 50%;
+    float: right;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-times {
+    color:  #162131;
+}
+
+

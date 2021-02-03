@@ -25,7 +25,7 @@
     
     .hero__image{
         display: grid;
-        height: 20vh;
+        height: 200px;
         background-image: url(hamburger.svg);
         background-size: contain;
         background-repeat: no-repeat;
@@ -35,14 +35,13 @@
 
 .hero__text {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
+    height: auto !important;
+    padding: 10px;
 }
 
 .hero__image{
     display: grid;
-    height: 80vh;
+    height: 100vh;
     background-image: url(hamburger.svg);
     background-size: contain;
     background-repeat: no-repeat;

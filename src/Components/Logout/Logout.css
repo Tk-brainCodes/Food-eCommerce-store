@@ -3,8 +3,9 @@
 .log__Btn {
     padding: 1em 2em;
     margin: 5px;
-    background: white;
-    border: 2px solid #d4ba52;
+    background: none;
+    color: white;
+    border: 2px solid#FA9F42;
     outline: none;
     font-size: 16px;
     font-weight: bold;

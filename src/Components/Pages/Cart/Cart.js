@@ -1,7 +1,18 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
+import BackBtn from '../BackButton/BackBtn';
+import { NavLink } from 'react-router-dom';
 import '../Food/Food.css';
+import Modal from 'react-modal';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
+
+
+
 
 const Cart = ({ cart, setCart }) => {
+
+    //bind modal to app element
+    Modal.setAppElement(document.getElementById('root'));
 
     //save to localStorage
     useEffect(() => {
@@ -9,7 +20,7 @@ const Cart = ({ cart, setCart }) => {
         if (addedToCart) {
             setCart(addedToCart);
         }
-    }, []);
+    }, [setCart]);
 
     const saveToLocalStorage = (items) => {
         localStorage.setItem('added-to-cart', JSON.stringify(items));
@@ -43,8 +54,25 @@ const Cart = ({ cart, setCart }) => {
         saveToLocalStorage(newCart);
     }
 
+
+    /*MODAL CODE*/
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    //open modal
+    const openModal = () => {
+        setIsOpen(true);
+    }
+
+    //close modal
+    const closeModal = () => {
+        setIsOpen(false);
+    }
+
     return (
         <div className="cart__component">
+            <NavLink exact to="/">
+                <BackBtn />
+            </NavLink>
             {cart.length === 0 ? (
                 <Fragment>
                     <div className="empty">
@@ -54,8 +82,8 @@ const Cart = ({ cart, setCart }) => {
                 </Fragment>
             ) : (
                     <>
-                        <h1 className="food__heading">Your Cart  <i className="fas fa-utensils"></i></h1><br />
-                        <h3 className="total__cost">Total: <b className="bold">${getTotalSum()} <i class="fas fa-money-check-alt"></i></b></h3>
+                        <h1 className="food__heading">
+                            Your Cart  <i className="fas fa-utensils"></i></h1><br />
                         <div className="clear_the_cart">
                             {cart.length > 0 && (<div id="clear__Btn" onClick={clearCart}>Clear Cart</div>)}
                         </div>
@@ -92,9 +120,51 @@ const Cart = ({ cart, setCart }) => {
                                     </div>
                                 ))}
                             </div>
-                            <div className="check__out">
+                            <h3 className="total__cost">Total: <b className="bold">${getTotalSum()} <i class="fas fa-money-check-alt"></i></b></h3><br />
+                            <div className="check__out" onClick={openModal}>
                                 <div className="checkOut__Btn">Check Out <i class="fas fa-money-check"></i></div>
                             </div>
+                            <ScrollAnimation className="animate__bounceIn" animateIn="bounceIn">
+                                <Modal
+                                    isOpen={modalIsOpen}
+                                    onRequestClose={closeModal}
+                                    contentLabel="Checkout Modal"
+                                    style={{
+                                        overlay: {
+                                            top: 0,
+                                            left: 0,
+                                            right: 0,
+                                            bottom: 0,
+                                            backgroundColor: 'rgba(0,0,0,0.8)',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center'
+                                        },
+                                        content: {
+                                            position: 'absolute',
+                                            background: '#162131',
+                                            overflow: 'hidden',
+                                            padding: "10px",
+                                            WebkitOverflowScrolling: 'touch',
+                                            outline: 'none',
+                                            width: '90vw',
+                                            height: '90vh',
+                                            animate: "bounceIn",
+                                            
+
+                                        }
+                                    }}
+                                    className="modal__box"
+                                >
+                                    <button
+                                        className="close__modal"
+                                        onClick={closeModal}
+                                    >
+                                        <i className="fas fa-times"></i>
+                                    </button>
+                                    
+                                </Modal>
+                            </ScrollAnimation>
                         </Fragment>
                     </>
                 )}

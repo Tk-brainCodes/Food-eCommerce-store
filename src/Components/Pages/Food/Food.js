@@ -59,7 +59,7 @@ const Food = (
 
 
     //close snackbar
-    const handleClose = (reason) => {        public/logo512.png
+    const handleClose = (reason) => {     
         if (reason === 'clickaway') {
             return;
         }

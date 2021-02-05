@@ -37,6 +37,7 @@ const Food = (
     const addToCart = (product) => {
         let newCart = [...cart];
         let itemInCart = newCart.find((item) => product.title === item.title);
+        //if item is in cart
         if (itemInCart) {
             itemInCart.quantity++;
         } else {
@@ -58,7 +59,7 @@ const Food = (
 
 
     //close snackbar
-    const handleClose = (reason) => {
+    const handleClose = (reason) => {        public/logo512.png
         if (reason === 'clickaway') {
             return;
         }

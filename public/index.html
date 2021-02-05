@@ -3,18 +3,34 @@
 
 <head>
   <meta charset="utf-8" />
+  <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <script src="https://kit.fontawesome.com/7fd3eb154a.js" crossorigin="anonymous"></script>
-  <title>  Foodie-order</title>
+</head>
+<title>Foodie-order</title>
 </head>
 
+<head>
+
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <div id="root">
+    <h1>Foodie order</h1>
+    <h2>Loading...</h2>
+  </div>
 </body>
+<script>
+  if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker
+      .register("/service-worker.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered", err))
+  })
+}
+</script>
 
 </html>

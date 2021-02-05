@@ -10,6 +10,8 @@
     flex-wrap: wrap;
     margin-top: 30px;
     margin-bottom: 100px;
+    padding: 0;
+    width: 100vw;
 }
 
 .food__ {
@@ -183,9 +185,10 @@ h1 {
 }
 
 #clear__Btn {
-    padding: 1em 2em;
-    background: rgb(223, 162, 162);
-    color: rgb(194, 69, 69);
+    width: auto !important;
+    padding: 1em 4em;
+    background: #F1BCBC;
+    color: #8E1E1E;
     font-weight: bolder;
     text-transform: uppercase;
     cursor: pointer;
@@ -300,24 +303,6 @@ h5 {
     background:  #f09234;
 }
 
-.isSaved__ {
-    padding: 10px;
-    background: none;
-    outline: none;
-    border: none;
-    color: #2B4162;
-    font-size: 20px;
-}
-
-.disabled {
-    padding: 10px;
-    background: none;
-    outline: none;
-    border: none;
-    color: white;
-    background-color: white;
-    font-size: 20px;
-}
 
 .remove{
     padding: 1em 2em;
@@ -328,26 +313,4 @@ h5 {
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
-
-.close__modal {
-    width: 50px;
-    height: 50px;
-    outline: none;
-    border-radius: 50%;
-    float: right;
-    margin: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    background: white;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fa-times {
-    color:  #162131;
-}
-
 

@@ -1,6 +1,5 @@
 const staticFoodieOrder = "foodie-order-v1"
 const assets = [
-    "/",
     "/index.html",
     "/favicon.io",
     "/logo192.png",

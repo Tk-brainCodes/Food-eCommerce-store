@@ -9,7 +9,7 @@ li {
     text-decoration: none;
     font-size: 12px;
     font-weight: bolder;
-    color: white;
+    color: black;
     line-height: 30px;
     text-transform: uppercase;
     padding: 0 30px;
@@ -24,7 +24,8 @@ li {
 }
 
 .nav__bar {
-    background-color:  #08543C;
+    background-color: rgb(253, 253, 253);
+    color: black;
     margin: 0;
     width: 100vw;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);

@@ -3,13 +3,13 @@ import { useAuth0 } from '@auth0/auth0-react';
 import './Login.css';
 
 const Login = () => {
-    const { loginWithPopup } = useAuth0();
+    const { loginWithRedirect } = useAuth0();
     return (
         <button
-             onClick={() => loginWithPopup()}
+             onClick={() => loginWithRedirect()}
              className="log__Btn"
         >
-            Login or Sign Up
+            Login
         </button>
     )
 }

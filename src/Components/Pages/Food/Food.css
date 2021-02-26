@@ -3,15 +3,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@700&family=Russo+One&family=Yusei+Magic&display=swap');
 
 
+
+@media screen and (min-width: 480px) {
+    .container__ {
+        margin-top: 30px;
+        margin-bottom: 100px;
+        padding: 0;
+        width: 80vw;
+        margin: 0;
+    }    
+}
+
+
+
 .container__ {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     margin-top: 30px;
     margin-bottom: 100px;
     padding: 0;
-    width: 100vw;
+    width: 90vw;
+    margin-right: 40px;
 }
 
 .food__ {
@@ -39,38 +49,45 @@
 
 
 .food__container {
-    background: ghostwhite;
+    background:rgb(241, 241, 250);
+    color: black;
     margin-top: 20px;
     margin-left: 25px;
     margin-bottom: 25px;
-    width: 350px;
+    width: 320px;
     height: auto !important;
     border-radius: 4px;
-    -webkit-box-shadow: -1px -1px 125px -35px rgba(0,0,0,0.75);
--moz-box-shadow: -1px -1px 125px -35px rgba(0,0,0,0.75);
-box-shadow: -1px -1px 125px -35px rgba(0,0,0,0.75);
 }
 
 .img {
     width: 300px;
     height: 220px;
     border-radius: 6px;
+    margin-top: 5px;
 }
 
 h1 {
+    width: 100vw;
     color: #FA9F42;
     font-size: clamp(35px,2.5vw, 40px);
     line-height: 2em;
     letter-spacing: 2px;
 }
 
+.sub__cart {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .Header {
     padding: 10px;
     font-size: 20px;
-    height: 100px;
+    height: 30px;
     font-weight: bolder;
     color:  #7F7F87;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-top: 10px;
     font-family: 'Yusei Magic', sans-serif;
 }
@@ -79,7 +96,7 @@ h1 {
     font-size: 50px;
     color: #2B4162;
     font-weight: 900;
-    padding: 20px;
+    padding: 10px;
 }
 
 .addBtn {
@@ -87,9 +104,9 @@ h1 {
     border-radius: 18px;
     font-size: 18px;
     font-weight: bolder;
-    margin-top: 5px;
+    margin-top: 2px;
     margin-bottom: 10px;
-    background: #2B4162;
+    background:#fa9632;
     color: white;
     border: none;
     cursor: pointer;
@@ -106,6 +123,8 @@ h1 {
     align-items: center;
     justify-content: space-evenly;
 }
+
+
 
 .Btn__love {
     font-size: 30px;
@@ -124,17 +143,11 @@ h1 {
     transform: rotateY(-360deg); 
 }
 
-.loading {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .food__heading {
     margin-top: 40px;
     padding: 10px;
+    width: 100vw;
 }
 
 .cart__heading {
@@ -205,8 +218,10 @@ h1 {
 }
 
 .cart__component {
+    display: block;
    margin: 0;
    padding: 0;
+   width: 100vw;
 }
 
 .quantity {
@@ -264,10 +279,10 @@ h1 {
 }
 
 h5 {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bolder;
     color:  #0B6E4F;
-    padding: 20px;
+    padding: 5px;
 }
 
 .text {

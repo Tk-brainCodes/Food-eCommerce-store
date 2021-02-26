@@ -3,15 +3,42 @@
   padding: 0;
 }
 
+
+
+.spinner__{
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+
 .App__ {
    background: #162131;
+   display: block;
    text-align: center;
-   width: 100vw;
+   width: 100%;
    height: auto !important;
+   padding: 0;
+   margin: 0;
 }
 
 @media screen and (max-width: 480px) {
   .App__{
     overflow: hidden;
+    width: 100%;
   }
+}
+
+.content__container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }

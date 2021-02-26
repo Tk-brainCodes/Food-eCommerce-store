@@ -1,16 +1,20 @@
 .top__nav {
     width: 100vw;
-    background: #0B6E4F;
-    color: white;
+    background: white;
+    color: black;
 }
 
 .spinner__{
-    padding: 20px;
+    padding: 10px;
     margin-top: 20px;
     font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 20px;
 }
 
 .spinning__icon {
@@ -27,7 +31,6 @@
 .isAuthenticated__{
     width: 60%;
     padding: 10px;
-    margin-right: 40px;
 }
 
 @media screen and (max-width: 480px) {

@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanalei&family=Lobster+Two&family=Ramabhadra&family=Yusei+Magic&display=swap');
 
 .hero__section {
     display: grid ;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     height: auto !important;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 
@@ -12,45 +11,61 @@
     .hero__section {
         display: flex ;
         flex-wrap: wrap;
-        flex-flow: column;
+        flex-flow: column-reverse;
         height: auto !important;
         margin-top: 30px;
     }
-    
-    .hero__text {
-        display: grid;
-        width: 100vw;
-        height: auto !important;
-    }
-    
-    .hero__image{
-        display: grid;
-        height: 200px;
-        background-image: url(hamburger.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
 
+    .image__conitainer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+        height: 100vh;
+        margin-top: 20px;
+        padding: 10px;
+        background-image: url(food.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background: none;
     }
+    .image__table  {
+        visibility: hidden;
+    }        
 }
 
 .hero__text {
     display: flex;
+    flex-wrap: wrap;
     height: auto !important;
     padding: 10px;
+    width: 100vw;
+}
+
+.image__conitainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vh;
+    height: 130vh;
+    margin-top: 20px;
+    padding: 10px;
+    background-image: url(food.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero__image{
     display: grid;
-    height: 100vh;
-    background-image: url(hamburger.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
+    width: 400px;
+    height: 110vh;
+    
 }
 
 .hero__textarea {
+    display: grid;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 2px;
     width: 600px;
+    height:auto !important;
 }
 
 .dicover__dishes {
@@ -62,7 +77,7 @@
 }
 
 #dish {
-    font-family: 'Hanalei', cursive;
+    font-family: sans-serif;
     font-style: normal;
     color: #d4ba52;
     letter-spacing: 5px;
@@ -73,7 +88,17 @@
     color: white;
     line-height: 50px;
     letter-spacing: 2px;
+    height: auto !important;
 }
+
+.image__table  {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+    height: 350px;
+    background-repeat: no-repeat;
+    padding: 25px;
+}                                                                                           
 
 #bold {
     font-size: 35px;

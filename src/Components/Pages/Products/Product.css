@@ -1,0 +1,104 @@
+.movie__container{
+    display: inline-flex;
+    overflow-x: auto;
+    width: 100vw;
+    height: auto !important;
+    flex-wrap: nowrap;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    padding: 20px;
+    border-radius: 4px;
+    outline: none;
+    background: none;
+    font-size: 35px;
+    color: grey;
+    border: none;
+    margin-left: 50px;
+}
+
+.submit__btn{
+    padding: 1em 1em;
+    outline: 0;
+    font-weight: 20px;
+    background: none;
+    border: 2px solid #FA9F42;
+    border-radius: 4px;
+    color: white;
+    font-size: 15px;
+}
+
+.card__food {
+    width: 400px;
+    padding: 10px;
+    height: 380px;
+    text-align: center;
+    background: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    transition: transform 0.2s;
+}
+
+.card__food:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.p__three {
+    font-size: 15px;
+    font-weight: bolder;
+    color:  #0B6E4F;
+    padding: 5px;
+    height: 10px;
+    margin-bottom: 10px;
+}
+
+.p__two {
+    font-size: 20px;
+    font-weight: bolder;
+    color:  #7F7F87;
+    font-family: 'Yusei Magic', sans-serif;
+    padding: 5px;
+    height: 10px;
+    margin-bottom: 10px;
+}
+
+.p__price {
+    font-size: 15px;
+    color: #2B4162;
+    font-weight: 900;
+    padding: 5px;
+    height: auto !important;
+    margin-bottom: 10px;
+}
+
+.Add__ {
+    font-size: 20px;
+    background: #FA9F42;
+    padding: 1em 1em;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#img {
+    border-radius: 50%;
+}
+
+.searched {
+    padding: 20px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 40px;
+    font-weight: 300;
+    color: grey;
+    margin-top: 10px;
+}

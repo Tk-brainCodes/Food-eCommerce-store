@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 .log__Btn {
-    padding: 1em 2em;
+    padding: 1em 1em;
     margin: 5px;
     background: none;
-    color: white;
+    color:#FA9F42 ;
     border: 2px solid#FA9F42;
     outline: none;
     font-size: 16px;
@@ -13,15 +13,17 @@
 }
 
 .user__image {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    margin-top: 10px;
+    
 }
 
 .user__container {
+    float: right;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 10px;
 }
 
 .user__name{

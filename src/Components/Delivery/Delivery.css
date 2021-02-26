@@ -1,0 +1,38 @@
+.delivery__ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url(Des-delivery.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 130vh;
+    height: 300px;
+    text-align: center;
+    border-radius: 20px;
+    
+    
+}
+
+@media screen and (max-width: 480px) {
+    .delivery__ {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-image: url(Des-delivery.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vh;
+        height: 260px;
+        text-align: center;
+        border-radius: 2px;
+    }
+}
+
+.h1__ {
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    line-height: 50px;
+}

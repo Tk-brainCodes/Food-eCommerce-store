@@ -2,8 +2,6 @@ import React, { Fragment, useEffect } from 'react';
 import BackBtn from '../BackButton/BackBtn';
 import { NavLink } from 'react-router-dom';
 import '../Food/Food.css';
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.min.css";
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -24,7 +22,7 @@ const Cart = ({ cart, setCart }) => {
 
     //stripe checkout code
     const handleToken = async (token) => {
-        const response = await axios.post("http://localhost:8080/checkout", {
+        const response = await axios.post("https://pacific-inlet-13182.herokuapp.com//checkout", {
             token,
             cart,
             sum,
@@ -93,22 +91,22 @@ const Cart = ({ cart, setCart }) => {
             ) : (
                     <>
                         <h1 className="food__heading">
-                            Your Cart  <i className="fas fa-utensils"></i></h1><br />
+                            Your Cart  <i className="fas fa-utensils"></i>
+                            </h1><br />
                         <div className="clear_the_cart">
                             {cart.length > 0 && (<div id="clear__Btn" onClick={clearCart}>Clear Cart <i className="far fa-trash-alt"></i></div>)}
                         </div>
-                        <Fragment>
-                            <ScrollAnimation className="animate__backInUp" animateIn="backInUp">
+                        <Fragment className="sub__cart">
                                 <div className="food__">
                                     {cart.map((receipt, idx) => (
                                         <div className="food__container" key={idx}>
-                                            <div className="Header">
-                                                {receipt.title}
-                                            </div>
                                             <img className="img" src={receipt.image} alt={receipt.title} />
                                             <div className="price__">
                                                 ${receipt.price}
                                             </div>
+                                            <div className="Header">
+                                            {receipt.title}
+                                        </div>
                                             <h5>Quantity</h5>
                                             <div className="quantity">
                                                 <h4 className="quantity__">
@@ -131,9 +129,7 @@ const Cart = ({ cart, setCart }) => {
                                         </div>
                                     ))}
                                 </div>
-                            </ScrollAnimation>
                             <h3 className="total__cost">Total: <b className="bold">${getTotalSum()} <i className="fas fa-money-check-alt"></i></b></h3><br />
-                            <ScrollAnimation className="animate__backInUp" animateIn="backInUp">
                                 <StripeCheckout
                                     stripeKey="pk_test_51IGZ6EJWDBULoxk2muGXqz9RpyZtR6zmQdyb9QN4CJZNlXAFt6yaIponKddgxgnDveYTY3ISb2V1UR177txFJj1i00K0jBKRWQ"
                                     token={handleToken}
@@ -148,7 +144,6 @@ const Cart = ({ cart, setCart }) => {
                                     </div>
 
                                 </StripeCheckout>
-                            </ScrollAnimation>
                         </Fragment>
                     </>
                 )}

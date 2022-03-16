@@ -1,6 +1,6 @@
-<h1> CROWN CLOTHING </h2>
+<h1> FOODIE </h2>
 <p>A full-stack React application built for buying your finding closest restaurants near you, order food, checkout payments.</p>
-<p>website: https://crown-clothing-shop.vercel.app/</p>
+<p>website: </p>
 
 
 ## Tech stack
@@ -16,11 +16,11 @@
 
  ## How to use this repo
  ```
-git clone https://github.com/Tk-brainCodes/Crown-Clothing.git
+git clone https://github.com/Tk-brainCodes/Food-eCommerce-store.git
 ```
 
 ```
-cd Crown-Clothing
+cd Food-eCommerce-store
 ```
 ```
 npm install

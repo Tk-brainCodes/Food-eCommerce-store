@@ -1,6 +1,6 @@
 <h1> FOODIE </h2>
 <p>A full-stack React application built for buying your finding closest restaurants near you, order food, checkout payments.</p>
-<p>website: </p>
+<p>website: tk-foodie-order.netlify.app/</p>
 
 
 ## Tech stack

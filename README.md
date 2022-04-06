@@ -7,7 +7,7 @@
 
 <ul>
   <li>React js</li>
-  <li>css</li>
+  <li>CSS</li>
   <li>AuthO (for Authentication)</li>
   <li>Javascript (ES6+)</li>
   <li>Sponocular API</li>
